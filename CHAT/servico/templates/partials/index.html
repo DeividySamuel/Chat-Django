@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'auth/css/home.css' %}">
+<title>CHAT</title>
+
+<div class="form-body">
+  <div class="row">
+      <div class="form-holder">
+          <div class="form-content">
+              <div class="form-items">
+                  <h3>Chat Django</h3>
+                 
+                  <form id="post-form" method="POST" action="checkview">
+                    {% csrf_token %}
+                      <div class="col-md-12">
+                        <input type="text" name="room_name" id="room_name"  placeholder="Nome da Sala " required>
+                         <div class="valid-feedback">Username field is valid!</div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <input type="text" name="username" id="username" placeholder="Usuario" required>
+                           <div class="valid-feedback">Email field is valid!</div>
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-button mt-3">
+                        <input type="submit" value="Entrar">
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
